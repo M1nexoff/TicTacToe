@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView10" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/tic_tac_toe"
+        app:layout_constraintDimensionRatio="3:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_button_login"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10">
+
+        <TextView
+            android:id="@+id/wins"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text="72"
+            android:textColor="#000"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="60dp"
+            android:layout_height="5dp"
+            android:backgroundTint="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text="Win"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_button_login"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10">
+
+        <TextView
+            android:id="@+id/loses"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text="72"
+            android:textColor="#000"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="60dp"
+            android:layout_height="5dp"
+            android:backgroundTint="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text="Lose"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/player_list_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_recycler"
+        android:paddingTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:listitem="@layout/item_player" />
+
+    <ImageView
+        android:id="@+id/empty_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/flashlight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/player_list_recycle"
+        app:layout_constraintVertical_bias="0.372" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/empty_text"
+        android:text="No data now :("
+        android:textColor="@color/black"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/empty_image"
+        app:layout_constraintStart_toStartOf="@+id/empty_image"
+        app:layout_constraintTop_toBottomOf="@+id/empty_image" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.XVsOOnline" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:statusBarColor">#000</item>
+        <item name="android:windowBackground">#000</item>
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+</resources>

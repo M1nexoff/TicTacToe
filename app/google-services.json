@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "757058534905",
+    "project_id": "tictactoe-c9d48",
+    "storage_bucket": "tictactoe-c9d48.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757058534905:android:373438ea97019abdd61128",
+        "android_client_info": {
+          "package_name": "uz.gita.xvsoonline"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfVPIrvxTGYfFp480EY8b_OycEixI2K00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

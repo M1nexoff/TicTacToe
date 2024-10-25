@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        tools:layout="@layout/screen_splash"
+        android:name="uz.gita.xvsoonline.ui.splash.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            android:id="@+id/action_splashScreen_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_login"
+        android:id="@+id/loginScreen"
+        android:name="uz.gita.xvsoonline.ui.login.LoginScreen"
+        android:label="LoginScreen" >
+        <action
+            android:id="@+id/action_loginScreen_to_menuScreen"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit"
+            app:destination="@id/menuScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_menu"
+        android:id="@+id/menuScreen"
+        android:name="uz.gita.xvsoonline.ui.menu.MenuScreen"
+        android:label="MenuScreen" >
+        <action
+            android:id="@+id/action_menuScreen_to_gameScreen"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit"
+            app:destination="@id/gameScreen" />
+        <argument
+            android:name="player"
+            app:argType="uz.gita.xvsoonline.data.model.ui.Player" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_game"
+        android:id="@+id/gameScreen"
+        android:name="uz.gita.xvsoonline.ui.game.GameScreen"
+        android:label="GameScreen" >
+        <argument
+            android:name="game"
+            app:argType="uz.gita.xvsoonline.data.model.ui.Game" />
+        <argument
+            android:name="curUserId"
+            app:argType="string" />
+    </fragment>
+</navigation>
